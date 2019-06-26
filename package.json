@@ -1,0 +1,17 @@
+{
+  "name": "serial-data-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/inspermileage/serial-data-generator.git",
+  "author": "Martim <martimfj@al.insper.edu.br>",
+  "license": "MIT",
+  "scripts": {
+    "dev" : "nodemon index.js"
+  },
+  "dependencies": {
+    "serialport": "^7.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
