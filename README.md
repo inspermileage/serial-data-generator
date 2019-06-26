@@ -1,5 +1,5 @@
 # Serial Data Generator
-This arduino program generates random data simulating 6 sensors and prints to the USB Serial port.
+A arduino program that generates random data simulating 6 sensors and a JS program that parses the data into a JSON.
 
 The protocol used was:
 
