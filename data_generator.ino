@@ -10,14 +10,14 @@ char *sensorName[] = {
   "current"
 };
 
-int sensorData[7][2]= {
- {1, 5},
- {150, 170},
- {100, 120},
- {25, 40},
- {1500, 3000},
- {0, 40},
- {0, 5},
+float sensorData[7][2]= {
+ {10, 50},
+ {1500, 1700},
+ {1000, 1200},
+ {250, 400},
+ {15000, 30000},
+ {0, 400},
+ {0, 50},
 };
 
 void setup() {
@@ -26,17 +26,17 @@ void setup() {
 
 void loop() {
   Serial.print("<");
-  Serial.print(random(0, 2)); // Button Command
+  Serial.print((float)random(0, 2)); // Button Command
   Serial.print(",");
   for(int x = 0; x < 7; x++){
       //Serial.print(sensorName[x]);
       //Serial.print(":");
-      Serial.print(random(sensorData[x][0], sensorData[x][1]));
+      Serial.print((float)random(sensorData[x][0], sensorData[x][1])/100);
 
       if(x != 6){
         Serial.print(",");
       }
   }
-  Serial.println(">");
+  Serial.print(">");
   delay(1000);
 }

@@ -14,7 +14,7 @@ parser.on('open', function () {
 
 parser.on('data', function (data) {
     // console.log(JSON.stringify(data)); //Shows what the computer is receiving from the USB Serial, including \n\r
-    const parsedData = data.toString().split(',');
+    const parsedData = data.split(',').map(Number);
     // console.log(parsedData);  // Shows parsed data by comma in list
     console.log(toJSON(parsedData));
 });
